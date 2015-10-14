@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.2" client="site" method="upgrade">
+	<name>mod_feuerwehr_unwetter</name>
+	<author>Ralf Meyer</author>
+	<creationDate>14.10.2015</creationDate>
+	<copyright>Copyright (C) 2015 Open Source Matters. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>ralf.meyer@einsatzkomponente.de</authorEmail>
+	<authorUrl>www.einsatzkomponente.de</authorUrl>
+	<version>1.0</version>
+	<description><![CDATA[<div style="border:1px solid #000; padding-left:5px;"><span style=" font-size: 18px; color:#F00;"><b>mod_feuerwehr_unwetter für J3.x</b></span><br/><br/><span style="font-size:10px;"></span>Das Modul dient zur Anzeige von Warnkarten des DWD auf einer Modulpositon<br/><br/>Für weitere Informationen besuchen Sie bitte unser Supportforum <a href="http://www.einsatzkomponente.de" target="_blank">einsatzkomponente.de</a> </div>]]></description>	
+	<files>
+		<filename module="mod_feuerwehr_unwetter">mod_feuerwehr_unwetter.php</filename>
+		<filename module="mod_feuerwehr_unwetter">helper.php</filename>
+		<filename module="mod_feuerwehr_unwetter">tmpl/default.php</filename>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">	
+		<field name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="MODULE CLASS-SUFFIX"/>
+		<field name="@spacer" type="spacer" default="" label="" description="" />
+		<field name="unwetter" type="radio" class="btn-group" default="1" label="Unwetteranzeige:" description="Soll die Unwetterkarte eingeblendet werden?">
+			<option value="0">Nein</option>
+			<option value="1">Ja</option>
+		</field>
+		
+
+			<field name="waldbrand" type="radio" class="btn-group" default="1" label="Waldbrandanzeige:" description="Soll die Waldbrandkarte eingeblendet werden?">
+			<option value="0">Nein</option>
+			<option value="1">Ja</option>
+		</field>
+		<field name="grasland" type="radio" class="btn-group" default="1" label="Graslandanzeige:" description="Soll die Graslandkarte eingeblendet werden?">
+			<option value="0">Nein</option>
+			<option value="1">Ja</option>
+		</field>
+		<field name="bl" type="list" default="DE" label="Bundesland:" description="Waehlen Sie die anzuzeigende Region">
+			<option value="bl01">Baden-Württemberg</option>
+			<option value="bl02">Bayern</option>
+			<option value="bl03">Berlin</option>
+			<option value="bl04">Brandenburg</option>
+			<option value="bl05">Bremen</option>
+			<option value="bl06">Hamburg</option>
+			<option value="bl07">Hessen</option>
+			<option value="bl08">Mecklenburg-Vorpommern</option>
+			<option value="bl09">Niedersachsen</option>
+			<option value="bl10">Nordrhein-Westfalen</option>
+			<option value="bl11">Rheinland-Pfalz</option>
+			<option value="bl12">Saarland</option>
+			<option value="bl13">Sachsen</option>
+			<option value="bl14">Sachsen-Anhalt</option>
+			<option value="bl15">Schleswig-Holstein</option>
+			<option value="bl16">Thüringen</option>
+		</field>
+		
+		
+		<field name="width" type="text" default="150px" label="Bildbreite:" description="In welcher breite sollen die Wetterwarnbilder dargestellt werden">
+		</field>
+		</fieldset>
+		</fields>
+	</config>
+</extension>
